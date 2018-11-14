@@ -1,12 +1,11 @@
-#include "mainwindow.h"
+#include "welcomescreen.h"
 #include <QApplication>
 #include<QDesktopWidget>
-
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.setWindowFlags(Qt::Window);
+    welcomeScreen w;
+    w.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     w.move(QApplication::desktop()->rect().center() - w.rect().center());
     w.show();
 
